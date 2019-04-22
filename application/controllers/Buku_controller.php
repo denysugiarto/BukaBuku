@@ -17,7 +17,9 @@ public function Product() {
     $this->load->view("Product");
 }
 
-
+public function login() {
+    $this->load->view("login");
+}
 
 
 }
