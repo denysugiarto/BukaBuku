@@ -4,9 +4,13 @@
 class Buku_controller extends CI_Controller
 {
 
-public function index(){
-$this->load->view("halaman_utama");
+public function index()
+{
+    $this->load->view("halaman_utama");
+}
 
+public function Daftar_Keinginan() {
+    $this->load->view("Daftar_Keinginan");
 }
 
 public function login(){
@@ -16,6 +20,11 @@ public function login(){
 public function daftar(){
     $this->load->view("halaman_daftar");
 }
+public function Product() {
+    $this->load->view("Product");
+}
+
+
 
 public function keranjang() {
     $this->load->view("halaman_keranjang");
