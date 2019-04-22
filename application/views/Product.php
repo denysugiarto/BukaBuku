@@ -414,7 +414,15 @@ Serial novel laris yang ditulis George RR Martin ini penuh dengan sejarah, sindi
                 </div>
                 <div>
                     <a href="/wishlists/wishlist_add/9786025346972" alt="general" class="product_save_for_later">Tambah ke Daftar Keinginan</a> </div>
+                <div>
+                    <a href="/wishlists/wishlist_add/9786025346972" alt="general" class="product_save_for_later" align="center">Edit Buku</a> </div>
+                <div>
+                    <a href="/wishlists/wishlist_add/9786025346972" alt="general" class="product_save_for_later" align="center">Tambah Buku</a> </div>
             </div>
+        </div>
+            </div>
+
+
 
             <br>
             <div class="right_section_container">

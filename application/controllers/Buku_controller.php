@@ -24,8 +24,6 @@ public function Product() {
     $this->load->view("Product");
 }
 
-
-
 public function keranjang() {
     $this->load->view("halaman_keranjang");
 }
@@ -36,5 +34,13 @@ public function keranjang_isi() {
 
 public function pencarian() {
     $this->load->view("halaman_pencarian");
+}
+
+public function tambahbuku() {
+    $this->load->view("halaman_tambahbuku");
+}
+
+public function edit(){
+    $this->load->view("halaman_edit");
 }
 }
