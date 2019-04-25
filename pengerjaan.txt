@@ -1,0 +1,11 @@
+Praditya Risky(1301164288)
+-login
+-register
+-logout
+-detail buku
+
+deny sugiarto W (1301154194)
+-tambah buku
+-edit buku
+-view buku(di halaman utama)
+-delete buku

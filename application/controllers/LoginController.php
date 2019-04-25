@@ -19,31 +19,31 @@ class LoginController extends CI_Controller
   public function index()
   {
     if ($this->session->userdata('login')==1) {
-      redirect('BelajarController/index');
+      redirect('Buku_controller/index');
     }
     $this->load->view('login');
   }
 
   public function register_view(){
-    $this->load->view('register');
+    $this->load->view('halaman_daftar');
   }
 
   public function cek_login()
   {
-    $username = $this->input->post('username');
+    $email = $this->input->post('email');
     $password = $this->input->post('password');
 
-    $login = $this->LoginModel->login_user($username, $password);
+    $login = $this->LoginModel->login_user($email, $password);
 
     if ($login) {
       $sess_data = array(
           'logged_in' => 1,
-          'username' => $login->username
+          'nama' => $login->nama
       );
       $this->session->set_userdata($sess_data);
-      redirect('BelajarController/index');
+      redirect('Buku_controller/index');
     } else {
-      echo "<script>alert('Gagal login: Cek username, password!');</script>";
+      echo "<script>alert('Gagal login: Cek nama, password!');</script>";
       redirect('LoginController/index');
     }
   }
@@ -51,15 +51,16 @@ class LoginController extends CI_Controller
   public function register()
   {
     $this->load->model('LoginModel');
-    $username = $this->input->post('username');
+    $nama = $this->input->post('nama');
     $password = $this->input->post('password');
     $email = $this->input->post('email');
-    $table = 'user';
+    $table = 'akun';
 
     $data_insert = array (
-      'username' => $username,
-      'password' => $password,
-      'email' => $email
+			'nama' => $nama,
+			'email' => $email,
+      'password' => $password
+      
     );
 
     $register = $this->LoginModel->register_user($table, $data_insert);
@@ -76,3 +77,4 @@ class LoginController extends CI_Controller
     redirect('LoginController/index');
   }
 }
+
