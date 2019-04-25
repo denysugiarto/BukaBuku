@@ -48,7 +48,7 @@ class BelajarController extends CI_Controller
       'jurusan' => $jurusan
     );
 
-    $insert = $this->BelajarModel->input_data_mahasiswa($table,$data_insert);
+    $insert = $this->Buku->input_data_mahasiswa($table,$data_insert);
 
     if($insert){
       $this->session->set_flashdata('alert', 'sukses_insert');

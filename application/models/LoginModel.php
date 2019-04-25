@@ -8,11 +8,11 @@
 
 class LoginModel extends CI_Model
 {
-  public function login_user($username, $password){
-    $this->db->where('username',$username);
+  public function login_user($email, $password){
+    $this->db->where('email',$email);
     $this->db->where('password',$password);
 
-    $result = $this->db->get('user');
+    $result = $this->db->get('akun');
     if($result->num_rows()==1){
         return $result->row(0);
     }else{
